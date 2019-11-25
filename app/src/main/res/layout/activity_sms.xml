@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sms">
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <EditText
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <Button
+        android:id="@+id/btnEnvoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoi Sms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de Telepohne"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="21dp"
+        android:text="Votre Message"
+        app:layout_constraintBottom_toTopOf="@+id/txtMessage"
+        app:layout_constraintTop_toTopOf="@+id/txtPhone"
+        tools:layout_editor_absoluteX="37dp" />
+
+</android.support.constraint.ConstraintLayout>
