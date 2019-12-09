@@ -1,49 +1,68 @@
 package com.github.mohamed9555;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ImageView;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 
 import java.util.List;
 
+import retrofit2.Response;
 import retrofitgerrit.Controller;
 import retrofitgerrit.Countries;
 import retrofitgerrit.OnItemClickListener;
 
-public class MainActivity extends Activity {
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+
+public class MapFragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<Countries> countriesList;
+    private Controller controller;
     private Toolbar toolbar;
-
-    private MessageFragment fragment;
+    View view;
+ //   @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        toolbar =findViewById(R.id.toolBar);
-        setSupportActionBar(toolbar);
+   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    //    public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_map, container, false);
+        recyclerView = view.findViewById(R.id.my_recycler_view);
 
-       recyclerView = findViewById(R.id.my_recycler_view);
+        controller = new Controller(this);
+        //controller.start();
+//        Log.w("DEBUG", countriesList.toString());
+        return view;
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        controller.start();
+        //displayCountriesList(countriesList);
     }
 
     private void setSupportActionBar(View toolbar) {
     }
-
     public void displayCountriesList(List<Countries> countriesList) {
         this.countriesList = countriesList;
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         mAdapter = new MyAdapter(countriesList, new OnItemClickListener() {
             @Override
@@ -54,8 +73,9 @@ public class MainActivity extends Activity {
         recyclerView.setAdapter(mAdapter);
     }
 
+
     public void intentExtra(Countries item){
-        Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+        Intent intent = new Intent(getContext().getApplicationContext(), Main2Activity.class);
         intent.putExtra("capital",item.getCapital() );
         intent.putExtra("population", item.getPopulation());
         intent.putExtra("region", item.getRegion());
@@ -63,9 +83,5 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_menu,menu);
-        return true;
-    }
+
 }

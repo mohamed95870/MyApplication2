@@ -22,7 +22,8 @@
         <activity android:name=".Sms" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".Demarrage">
+        <activity android:name=".Demarrage"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

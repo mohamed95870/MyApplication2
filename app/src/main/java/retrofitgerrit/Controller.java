@@ -4,6 +4,7 @@ package retrofitgerrit;
 import java.util.List;
 
 import com.github.mohamed9555.MainActivity;
+import com.github.mohamed9555.MapFragment;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -16,11 +17,11 @@ public class Controller implements Callback<List<Countries>> {
 
     static final String BASE_URL = "https://restcountries.eu/rest/v2/";
 
-    private final MainActivity mainActivity;
+    private final MapFragment mapFragment;
 
 
-    public Controller(MainActivity mainActivity) {
-        this.mainActivity = mainActivity;
+    public Controller(MapFragment mapFragment) {
+        this.mapFragment = mapFragment;
     }
 
     public void start() {
@@ -44,7 +45,7 @@ public class Controller implements Callback<List<Countries>> {
     public void onResponse(Call<List<Countries>> call, Response<List<Countries>> response) {
         if(response.isSuccessful()) {
             List<Countries> countriesList = response.body();
-            mainActivity.displayCountriesList(countriesList);
+            mapFragment.displayCountriesList(countriesList);
         } else {
             System.out.println(response.errorBody());
         }
