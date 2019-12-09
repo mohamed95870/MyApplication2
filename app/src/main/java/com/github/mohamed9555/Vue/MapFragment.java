@@ -1,6 +1,5 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,22 +8,18 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+
+import com.github.mohamed9555.R;
 
 import java.util.List;
 
-import retrofit2.Response;
-import retrofitgerrit.Controller;
-import retrofitgerrit.Countries;
+import com.github.mohamed9555.Control.Controller;
+import com.github.mohamed9555.Model.Countries;
 import retrofitgerrit.OnItemClickListener;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MapFragment extends Fragment {
     private RecyclerView recyclerView;

@@ -18,11 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Photo" />
-        <activity android:name=".Sms" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Demarrage"
+        <activity android:name=".Vue.Photo" />
+        <activity android:name=".Vue.Sms" />
+        <activity android:name=".Vue.Main3Activity" />
+        <activity android:name=".Vue.Main2Activity" />
+        <activity android:name=".Vue.Demarrage"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Vue.MainActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

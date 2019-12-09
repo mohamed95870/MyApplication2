@@ -1,4 +1,4 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.github.mohamed9555.R;
 
 public class Sms extends AppCompatActivity {
 

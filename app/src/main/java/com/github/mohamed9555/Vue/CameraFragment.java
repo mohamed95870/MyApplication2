@@ -1,4 +1,4 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.github.mohamed9555.R;
 
 import java.io.File;
 import java.io.IOException;

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".Main3Activity">
+    tools:context=".Vue.Main3Activity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

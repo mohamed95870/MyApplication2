@@ -1,4 +1,4 @@
-package retrofitgerrit;
+package com.github.mohamed9555.Model;
 
 public class Countries {
 

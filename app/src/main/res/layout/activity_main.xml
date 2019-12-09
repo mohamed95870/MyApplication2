@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".Main3Activity"
+    tools:context=".Vue.Main3Activity"
     tools:openDrawer="start">
 
     <LinearLayout

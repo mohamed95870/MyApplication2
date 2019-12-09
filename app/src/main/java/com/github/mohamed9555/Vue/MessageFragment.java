@@ -1,4 +1,4 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.github.mohamed9555.R;
 
 public class MessageFragment extends Fragment {
     private EditText phone;

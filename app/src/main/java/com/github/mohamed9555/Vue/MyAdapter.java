@@ -1,4 +1,4 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
 import java.util.List;
 
@@ -6,11 +6,12 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import retrofitgerrit.Countries;
+import com.github.mohamed9555.R;
+
+import com.github.mohamed9555.Model.Countries;
 import retrofitgerrit.OnItemClickListener;
 
 

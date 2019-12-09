@@ -1,8 +1,10 @@
-package com.github.mohamed9555;
+package com.github.mohamed9555.Vue;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.github.mohamed9555.R;
 
 public class Main2Activity extends AppCompatActivity {
 

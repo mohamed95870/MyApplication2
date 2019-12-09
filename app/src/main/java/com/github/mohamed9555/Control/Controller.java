@@ -1,10 +1,10 @@
-package retrofitgerrit;
+package com.github.mohamed9555.Control;
 
 
 import java.util.List;
 
-import com.github.mohamed9555.MainActivity;
-import com.github.mohamed9555.MapFragment;
+import com.github.mohamed9555.Model.Countries;
+import com.github.mohamed9555.Vue.MapFragment;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,6 +13,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofitgerrit.GerritAPI;
+
 public class Controller implements Callback<List<Countries>> {
 
     static final String BASE_URL = "https://restcountries.eu/rest/v2/";
