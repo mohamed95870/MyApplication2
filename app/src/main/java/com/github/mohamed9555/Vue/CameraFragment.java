@@ -49,8 +49,6 @@ public class CameraFragment extends Fragment {
             }
         });
 
-        imgAffichePhoto = view.findViewById(R.id.imgAffichePhoto);
-
         return view;
 
     }

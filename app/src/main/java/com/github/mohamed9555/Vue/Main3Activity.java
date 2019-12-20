@@ -62,7 +62,7 @@ public class Main3Activity extends AppCompatActivity implements NavigationView.O
                 break;
         }
 
-        drawer.closeDrawer(GravityCompat.START);
+       drawer.closeDrawer(GravityCompat.START);
 
         return true;
     }

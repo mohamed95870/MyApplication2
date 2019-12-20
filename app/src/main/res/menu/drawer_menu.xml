@@ -17,13 +17,8 @@
             android:icon="@drawable/ic_camera"
             android:title="Camera" />
 
-        <item android:id="@+id/nav_about"
-            android:icon="@drawable/ic_about"
-            android:title="About" />
+     </group>
 
-
-    </group>
-    <group />
 
 
 </menu>

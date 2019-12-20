@@ -18,7 +18,7 @@ public class Sms extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sms);
+        //setContentView(R.layout.activity_sms);
         initActivity();
     }
 
@@ -29,11 +29,11 @@ public class Sms extends AppCompatActivity {
         createOnClickEnvoiButton();
     }
 
-    private void createOnClickEnvoiButton(){
-        envoi.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v){
-                SmsManager.getDefault().sendTextMessage(phone.getText().toString(), null,
-                        message.getText().toString(),null,null);
-            }
+   private void createOnClickEnvoiButton(){
+       envoi.setOnClickListener(new Button.OnClickListener() {
+       public void onClick(View v){
+            SmsManager.getDefault().sendTextMessage(phone.getText().toString(), null,
+            message.getText().toString(),null,null);
+      }
       });
 }}

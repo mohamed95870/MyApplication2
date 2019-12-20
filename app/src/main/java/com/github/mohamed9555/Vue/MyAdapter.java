@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.mohamed9555.R;
@@ -30,12 +31,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public TextView txtHeader;
         public TextView txtFooter;
         public View layout;
+        public ImageView imageView;
 
         public ViewHolder(View view) {
             super(view);
             layout = view;
             txtHeader =  view.findViewById(R.id.firstLine);
-            txtFooter =  view.findViewById(R.id.secondLine);
+            txtFooter =  view.findViewById(R.id.firstLine);
+            imageView = view.findViewById(R.id.image_icon);
         }
 
         public void bind(final Countries item, final OnItemClickListener listener) {
@@ -47,6 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 }
             });
         }
+
 
     }
 

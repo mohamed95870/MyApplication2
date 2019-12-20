@@ -51,8 +51,6 @@ public class MapFragment extends Fragment {
         //displayCountriesList(countriesList);
     }
 
-    private void setSupportActionBar(View toolbar) {
-    }
     public void displayCountriesList(List<Countries> countriesList) {
         this.countriesList = countriesList;
         recyclerView.setHasFixedSize(true);
@@ -67,7 +65,6 @@ public class MapFragment extends Fragment {
         });
         recyclerView.setAdapter(mAdapter);
     }
-
 
     public void intentExtra(Countries item){
         Intent intent = new Intent(getContext().getApplicationContext(), Main2Activity.class);

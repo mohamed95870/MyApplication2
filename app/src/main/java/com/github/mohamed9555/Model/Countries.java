@@ -6,6 +6,7 @@ public class Countries {
     private String capital;
     private String region;
     private int population;
+    private String flag;
 
     public Countries(String name, String capital, String region, int population) {
         this.name = name;
@@ -28,5 +29,9 @@ public class Countries {
 
     public int getPopulation() {
         return population;
+    }
+
+    public String getFlag() {
+        return flag;
     }
 }
