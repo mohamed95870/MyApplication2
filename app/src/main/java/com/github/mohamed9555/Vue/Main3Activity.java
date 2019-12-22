@@ -18,10 +18,6 @@ import com.github.mohamed9555.R;
 
 public class Main3Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-    private ImageView play;
-    private ImageView radio;
-    private ImageView sms;
-    private ImageView camera;
 
     private CameraFragment fragment;
 

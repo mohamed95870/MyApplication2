@@ -27,19 +27,15 @@ public class MapFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private List<Countries> countriesList;
     private Controller controller;
-    private Toolbar toolbar;
     View view;
  //   @Nullable
     @Override
 
    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    //    public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_map, container, false);
         recyclerView = view.findViewById(R.id.my_recycler_view);
 
         controller = new Controller(this);
-        //controller.start();
-//        Log.w("DEBUG", countriesList.toString());
         return view;
 
     }
@@ -48,7 +44,6 @@ public class MapFragment extends Fragment {
     public void onResume() {
         super.onResume();
         controller.start();
-        //displayCountriesList(countriesList);
     }
 
     public void displayCountriesList(List<Countries> countriesList) {

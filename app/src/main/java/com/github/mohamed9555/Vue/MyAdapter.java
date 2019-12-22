@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.github.mohamed9555.R;
-
 import com.github.mohamed9555.Model.Countries;
 import retrofitgerrit.OnItemClickListener;
 
@@ -19,8 +17,6 @@ import retrofitgerrit.OnItemClickListener;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Countries> values;
     private final OnItemClickListener listener;
-
-
 
     public Context context;
     // Provide a reference to the views for each data item
@@ -50,7 +46,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 }
             });
         }
-
 
     }
 

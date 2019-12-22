@@ -10,6 +10,7 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
@@ -24,7 +25,5 @@ public class Main2Activity extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.textView3);
         int population = getIntent().getIntExtra("population", 0);
         textView3.setText(Integer.toString(population));
-
-
     }
 }

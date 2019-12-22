@@ -28,15 +28,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        toolbar =findViewById(R.id.toolBar);
-        setSupportActionBar(toolbar);
-
        recyclerView = findViewById(R.id.my_recycler_view);
 
-    }
-
-    private void setSupportActionBar(View toolbar) {
     }
 
     public void displayCountriesList(List<Countries> countriesList) {
